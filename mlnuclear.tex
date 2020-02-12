@@ -460,130 +460,13 @@ so far have been to systems of electrons confined to move in two or
 three-dimensional regions (so-called quantum dots) and systems of
 bosons (weakly and strongly interacting) using a mix of neural network
 based algorithms and variational quantum Monte Carlo approaches. We are in the process of extending these calculations
-to nuclea physics problems. 
+to nuclear physics problems. 
 Furthermore, we have also explored the solution of the Similarity
 Renormalization Group set of equations using deep learning algorithms, with a great deal of success using Recurrent Neural Networks
 applied to extrapolations to large sets of many-body configurations. Preliminary studies of infinite nuclear matters holds great promise for handling systems of large numbers of particles.
 Applying ML methods to nuclear systems based on the above
 approaches is our central goal for the next five to ten years.  Reliable estimates of properties of infinite nuclear matter are expected to be of great importance for the experimental program at FRIB.
 
-One of the specific challenges emerging in the quantum domain is
-imposing physical symmetries in the NQS representations. In the case
-of a periodic arrangement of matter (often used in the simulation of
-infinite systems like nuclear matter and the homogeneous electron
-gas), spatial symmetries can be imposed using convolutional
-architectures similar to what is used in image classification tasks.
-While spatial symmetries have analogous counterparts in other ML
-applications, satisfying more involved quantum symmetries often needs
-a deep rethinking of ANN architectures.  The most notable case in this
-sense is the \emph{exchange symmetry}.  For bosons, this amounts to
-imposing the wave-function to be permutationally invariant with
-respect to exchange of particle indices. The Bose-Hubbard model has
-been adopted as a benchmark for ANN bosonic architectures, with
-state-of-the-art results having been obtained.  The most challenging
-symmetry is, however, certainly the fermionic one.  In this case, the
-NQS representation needs to encode the antisymmetry of the
-wave-function (exchanging two particle positions, for example, leads
-to a minus sign). In this case, different approaches have been
-explored, mostly expanding on existing variational ansatz for
-fermions. We have for example explicitely included the fermion
-antisymmetry by multiplying the NQS with an explicit Slater
-determinant.  The situation for fermions is certainly the most
-challenging for ML approaches at the moment, owing to the specific
-nature of the symmetry.  On the applications side, NQS representations
-have been used so-far along three main different research lines. These
-are:
-
-\begin{enumerate}
-\item Representation of states: An active area of research concerns the general expressive power
-of NQS, as also compared to other families of variational states.
-Theoretical activity on the representation properties
-of NQS seeks to understand how large, and how deep
-should be neural networks describing interesting interacting quantum systems.
-\item Learning from data: Parallel to the activity on understanding the theoretical properties of NQS,
-a family of studies in this field is concerned with the
-problem of understanding how hard it is, in practice, to learn
-a quantum state from numerical data.
-This can be realized using either synthetic data (for example coming from numerical simulations)
-or directly from experiments.
-
-This line of research has been explored in the supervised learning setting, to
-understand how well NQS can represent states that are not easily expressed (in closed analytic form) as ANN.
-The goal is then to train a NQS network to represent, as close as possible, a certain target state
-whose amplitudes can be efficiently computed.
-\item Finally, one of the main applications for the NQS representations is in the context
-of variational approximations for many-body quantum problems.
-The goal of these approaches is, for example, to approximately solve the Schr\"{o}dinger equation using a NQS representation for the wave-function.
-In this case, the problem of finding the ground state of a given quantum Hamiltonian $H$ is formulated in variational terms as the problem of learning NQS weights $W$
-minimizing $E(W)=\langle\Psi(W)|H|\Psi(W)\rangle/\langle\Psi(W)|\Psi(W)\rangle$. This is achieved using a learning scheme based on variational
-Monte Carlo optimization.
-Within this family of applications,
-no external data representative of the quantum state is given, thus they typically demand a larger computational burden than supervised and unsupervised learning schemes for NQS.
-\end{enumerate}
-
-
-We have worked on the latter approach in connection with studies of
-quantum dot systems (confined two-dimensional and three-dimensional
-electron systems).  Using Quantum Monte Carlo samplings (QMC), a
-practical issue often resulting is that of providing efficient
-sampling schemes of high-dimensional spaces (path integrals,
-perturbation series, etc..). This requires a careful tuning which is often
-problem-dependent.  Devising general-purpose samplers for these
-representations is therefore a particularly challenging
-problem. Unsupervised ML methods can, however, be adopted as a tool to
-speed-up Monte Carlo sampling for both classical and quantum
-applications. In the figure here, we show the speed-up obtained when
-using Restricted Boltzmann machines (RBM) for systems of
-two-dimensional quantum dots (with $N=2,6,12,20,30,42,56,72$
-electrons) compared with a Variational Monte Carlo calculation
-(VMC). The results for the energies are similar. The main speed-up is
-due to a simpler mathematical form for the correlated part of the
-trial wave function. In the RBM calculation we used a simple Slater
-determinant for the electrons using Hermite polynomials only. However,
-the results for energies and other observables can be improved upon by
-multiplying the NQS with a Jastrow factor (RBM+PJ/SJ). This leads
-however to an increase in CPU time  since the number of parameters to optmize
-increases. How to speed up the calculation of the Jastrow factor is
-also an important issue.
-\begin{figure}[hbtp]
-        \centering
-        \includegraphics[scale=0.5]{figures/quantumdots.pdf}
-        \caption{Speed-up obtained when
-using Restricted Boltzmann machines (RBM) for systems of
-two-dimensional quantum dots (with $N=2,6,12,20,30,42,56,72$
-electrons) compared with a Variational Monte Carlo calculation
-(VMC). The results for the energies are similar. The main speed-up is
-due to a simpler mathematical form for the correlated part of the
-trial wave function. In the RBM calculation we used a simple Slater
-determinant for the electrons using Hermite polynomials only. However,
-the results for energies and other observables can be improved upon by
-multiplying the NQS with a Jastrow factor (RBM+PJ/SJ).}
-\end{figure}
-
-
-
-
-Applications of ML to quantum many-body problems have seen a fast-pace
-progress in the past few years, touching a diverse selection of topics
-ranging from numerical simulation to data analysis. The potential of
-ML techniques has already surfaced in this context, already showing
-improved performance with respect to existing techniques on selected
-problems. To a large extent, however, the real power of ML techniques
-in this domain has been only partially demonstrated, and several open
-problems remain to be addressed.
-In the context of variational studies with NQS, for example, the
-origin of the empirical success obtained so far with different kind of
-neural network quantum states is not equally well understood as for
-other families of variational states, like tensor networks. Key open
-challenges remain also with the representation and simulation of
-fermionic systems, for which efficient neural-network representation
-are still to be found.
-
-
-
-The real challenge however is to extend these studies to nuclear
-systems. Applying ML methods to nuclear systems based on the above
-approaches is our central goal for the next five to ten years.  Reliable estimates of properties of infinite nuclear matter are expected to be of great importance for the experimental program at FRIB.
 
 
 
