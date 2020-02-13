@@ -1,0 +1,31 @@
+\subsubsection{Boltzmann Machines and the Nuclear Many-Body Problem}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{0.98\linewidth}
+\begin{description}
+%%%
+\item[Participants:] J. Butler (g), Jane Kim (g), S. Bogner, and M Hjorth-Jensen
+%%%
+\item[Description:] We have recently started to explore several approaches based on deep
+learning algorithms, with an emphasis on neural networks and so-called
+Boltzmann machines, with several promising results for interacting
+many-fermion systems. Our applications
+so far have been to systems of electrons confined to move in two or
+three-dimensional regions (so-called quantum dots) and systems of
+bosons (weakly and strongly interacting) using a mix of neural network
+based algorithms and variational quantum Monte Carlo approaches. We are in the process of extending these calculations
+to nuclear physics problems. 
+%%%
+\item[FRIB relevance:] 
+%%%
+\item[References:] {\it Solving Many-Body Problems with Boltzmann Machines}, in preparation
+\end{description}
+%%%
+\end{minipage}
+}
+\begin{figure}[htb!]
+\includegraphics[width=\linewidth]{figures/quantumdots.pdf}
+\caption{Ground state energies for systems of quantum dots.}}
+\end{figure}
+
+~
