@@ -147,12 +147,13 @@ We list here various acronyms used in the description of the different AI/ML pro
 \item[CL] Clustering
 \item[CNN] Convolutional neural networks
 \item[CoD] Coefficient of determination
+\item[DL] Deep learning
 \item[DRB] Decision trees, random forests and boosting
 \item[ECP] Empirical coverage probability
 \item[FS] Frequentist statistics
 \item[GM] Graphical models
 \item[GP] Bayesian Gaussian processes
-\item[KR] Kernel Regression
+\item[KR] Kernel regression
 \item[LR] Logistic regression
 \item[LSTM] Long short-term memory
 \item[MCMC] Markov chain Monte Carlo
@@ -162,6 +163,7 @@ We list here various acronyms used in the description of the different AI/ML pro
 \item[REG] Linear regression 
 \item[RL] Reinforcement learning
 \item[RNN] Recurrent neural networks
+\item[SL] Supervised learning
 \item[SVM] Support vector machines
 \item[UQ] Uncertainty quantification
 \item[VAE] Variational auto encoders
@@ -235,7 +237,7 @@ We list here various acronyms used in the description of the different AI/ML pro
 %%%
 \item[Participants:] D. Bazin, M. Hjorth-Jensen
 %%%
-\item[Description:] We have implemented several  machine learning methods for event classification in the Active-Target Time Projection Chamber detector at the National Superconducting Cyclotron Laboratory (NSCL) at Michigan State University. In particular we have implemented advanced convolutional autoencoder neural networks to the analysis of two-dimensional projections of particle tracks
+\item[Description:] We have implemented several  ML methods for event classification in the Active-Target Time Projection Chamber detector at NSCL. In particular we have implemented advanced convolutional AE NN to the analysis of two-dimensional projections of particle tracks
 from a resonant proton scattering experiment on $^{46}$Ar.
 
 
@@ -271,7 +273,7 @@ axes have arbitrary non-informative units.}
 %%%
 \item[Description:]  To improve the quality of model-based predictions of nuclear properties of rare isotopes far from stability, we consider the information contained in the residuals in the regions where the experimental information exist.  The emulators of  residuals and CIs defining theoretical error bars are constructed using  GP  and BNN.
 %%%
-\item[FRIB relevance:] The proposed Bayesian approach to extrapolation of nuclear model predictions can be useful for assessing the impact of current and future FRIB experiments. The new capability to evaluate residuals is also expected to impact research in the domains where experiments are currently impossible, for instance, in simulations of the astrophysical $r$ process.
+\item[FRIB relevance:] The proposed Bayesian SL approach to extrapolation of nuclear model predictions can be useful for assessing the impact of current and future FRIB experiments. The new capability to evaluate residuals is also expected to impact research in the domains where experiments are currently impossible, for instance, in simulations of the astrophysical $r$ process.
 %%%
 \item[References:] {\it Bayesian approach to model-based extrapolation of nuclear observables}, \href{https://journals.aps.org/prc/abstract/10.1103/PhysRevC.98.034318}{Phys. Rev. C 98, 034318 (2018)} (Editor's Suggestion).
 \end{description}
@@ -300,7 +302,7 @@ One-sigma and 1.65-sigma CIs are marked.
 %%%
 \item[Participants:] L. Neufcourt (p), Y. Cao (g), S.A. Giuliani (p), W. Nazarewicz, O.B. Tarasov, and E. Olsen (ULB)
 %%%
-\item[Description:] We use microscopic nuclear global mass models and Bayesian methodology to provide quantified predictions of proton and neutron separation energies  as well as Bayesian probabilities of existence
+\item[Description:] We use microscopic nuclear global mass models and Bayesian SL methodology to provide quantified predictions of proton and neutron separation energies  as well as Bayesian probabilities of existence
  throughout the nuclear landscape all the way to the particle drip lines. To account for uncertainties, Bayesian GP are trained on the separation-energy residuals for each individual model, and the resulting  predictions are  combined via BMA. This framework allows to account for systematic and statistical uncertainties and propagate them to extrapolative predictions. 
 %%%
 \item[FRIB relevance:] Considering the anticipated  FRIB production rates and uncertainties of theoretical predictions, we identified  regions, reached by FRIB, that are crucial for constraining theoretical mass models.
@@ -335,13 +337,13 @@ the experimental reach of  FRIB.
 %%%
 \item[Participants:] J. Butler (g), Jane Kim (g), O Udiani (g), S. Bogner, H. Hergert and M Hjorth-Jensen
 %%%
-\item[Description:] Machine Learning based methods offer several possibilities to
+\item[Description:] ML methods offer several possibilities to
 circumvent the curse of  increasing dimensionality, as well as
 allowing us to model quantum mechanical systems with less a priori
 knowledge. For complex many-body systems like those which arise in
 nuclear physics (in particular with the increase in the number of
 degrees of freedom for nuclei close to their limits of stability), this is a very interesting avenue to explore.   We have recently explored  the solution of the Similarity
-Renormalization Group set of equations and Coupled Cluster theory using deep learning algorithms, with a great deal of success using RNNs and LSTM based approaches, as well as KR based methods. Preliminary studies of infinite nuclear matters holds great promise for handling systems of large numbers of particles.
+Renormalization Group set of equations and Coupled Cluster theory using DL algorithms, with a great deal of success using RNNs and LSTM based approaches, as well as KR based methods. Preliminary studies of infinite nuclear matters holds great promise for handling systems of large numbers of particles.
 %%%
 \item[FRIB relevance:]  The ability to study theoretically nuclei at the limits of stability is a great challenge due to the increased number of degrees of freedom. These systems are highly relevant for the scientific program of FRIB. 
 %%%
@@ -366,8 +368,7 @@ Renormalization Group set of equations and Coupled Cluster theory using deep lea
 %%%
 \item[Participants:] J. Butler (g), Jane Kim (g), S. Bogner, and M Hjorth-Jensen
 %%%
-\item[Description:] We have recently started to explore several approaches based on deep
-learning algorithms, with an emphasis on neural networks and so-called
+\item[Description:] We have recently started to explore several approaches based on DL algorithms, with an emphasis on neural networks and so-called
 Boltzmann machines, with several promising results for interacting
 many-fermion systems. Our applications
 so far have been to systems of electrons confined to move in two or
@@ -376,7 +377,7 @@ bosons (weakly and strongly interacting) using a mix of neural network
 based algorithms and variational quantum Monte Carlo approaches. We are in the process of extending these calculations
 to nuclear physics problems.
 %%%
-\item[FRIB relevance:] The ability to study theoretically nuclei at the limits of stability is a great challenge due to the increased number of degrees of freedom. These systems are highly relevant for the scientific program of FRIB. 
+\item[FRIB relevance:] The ability to study theoretically nuclei at the limits of stability is a great challenge due to the huge number of degrees of freedom. These systems are highly relevant for the scientific program of FRIB. 
 %%%
 \item[References:] {\it Solving Many-Body Problems with Boltzmann Machines}, in preparation
 \end{description}
