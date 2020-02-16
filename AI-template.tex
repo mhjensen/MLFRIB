@@ -225,27 +225,33 @@ We list here various acronyms used in the description of the different AI/ML pro
 
 \subsection{Data Analysis and Statistical Analysis}
 
-\subsubsection{Add title}
+\subsubsection{Machine learning methods for track classification in the AT-TPC}
 
 \vspace{5mm}
 \noindent
 \fbox{\begin{minipage}{0.96\linewidth}
 \begin{description}
 %%%
-\item[Participants:] 
+\item[Participants:] D. Bazin, M. Hjorth-Jensen
 %%%
-\item[Description:]
+\item[Description:] We have implemented several  machine learning methods for event classification in the Active-Target Time Projection Chamber detector at the National Superconducting Cyclotron Laboratory (NSCL) at Michigan State University. In particular we have implemented advanced convolutional autoencoder neural networks to the analysis of two-dimensional projections of particle tracks
+from a resonant proton scattering experiment on $^{46}$Ar.
+
+
 %%%
-\item[FRIB relevance:] 
+\item[FRIB relevance:] We expect that many of the new FRIB experiments will produce larg eamounts of data. To classify various events of interest is then a task which requires a large degree of automation. We expect that these techniques will play a central role at FRIB. 
 %%%
-\item[References:] {\it },
+\item[References:] {\it Machine learning methods for track classification in the AT-TPC}, \href{https://doi.org/10.1016/j.nima.2019.05.097}{Nucl. Inst. Meth. A940 (2019) 56-167}
 \end{description}
 %%%
 \end{minipage}
 }
 \begin{figure}[htb!]
 \centering
-\caption{To be added}
+\includegraphics[width=\linewidth]{figures/attpc.png}
+\caption{Visualization of the latent space from the VGG16 model on
+three different data-sets.  The
+axes have arbitrary non-informative units.}
 \end{figure}
 \clearpage
 \newpage
@@ -322,9 +328,37 @@ Renormalization Group set of equations using deep learning algorithms, with a gr
 \clearpage
 \newpage
 
+\subsubsection{Boltzmann Machines and the Nuclear Many-Body Problem}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{0.98\linewidth}
+\begin{description}
+%%%
+\item[Participants:] J. Butler (g), Jane Kim (g), S. Bogner, and M Hjorth-Jensen
+%%%
+\item[Description:] We have recently started to explore several approaches based on deep
+learning algorithms, with an emphasis on neural networks and so-called
+Boltzmann machines, with several promising results for interacting
+many-fermion systems. Our applications
+so far have been to systems of electrons confined to move in two or
+three-dimensional regions (so-called quantum dots) and systems of
+bosons (weakly and strongly interacting) using a mix of neural network
+based algorithms and variational quantum Monte Carlo approaches. We are in the process of extending these calculations
+to nuclear physics problems.
+%%%
+\item[FRIB relevance:]
+%%%
+\item[References:] {\it Solving Many-Body Problems with Boltzmann Machines}, in preparation
+\end{description}
+%%%
+\end{minipage}
+}
+\begin{figure}[htb!]
+\includegraphics[width=\linewidth]{figures/quantumdots.pdf}
+\caption{Ground state energies for systems of quantum dots.}
+\end{figure}
 
-
-
+\clearpage\newpage
 
 
 \subsection{Applications}
