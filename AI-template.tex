@@ -240,7 +240,7 @@ from a resonant proton scattering experiment on $^{46}$Ar.
 
 
 %%%
-\item[FRIB relevance:] We expect that many of the new FRIB experiments will produce larg eamounts of data. To classify various events of interest is then a task which requires a large degree of automation. We expect that these techniques will play a central role at FRIB. 
+\item[FRIB relevance:] We expect that many of the new FRIB experiments will produce large amounts of data. To classify various events of interest is then a task which requires a large degree of automation. We expect that these techniques will play a central role at FRIB. 
 %%%
 \item[References:] {\it Machine learning methods for track classification in the AT-TPC}, \href{https://doi.org/10.1016/j.nima.2019.05.097}{Nucl. Inst. Meth. A940 (2019) 56-167}
 \end{description}
@@ -261,6 +261,35 @@ axes have arbitrary non-informative units.}
 
 \subsection{Basic Research}
 
+\subsubsection{Model-based Extrapolation of Nuclear Observables}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{\linewidth}
+\begin{description}
+%%%
+\item[Participants:] L. Neufcourt (p), Y. Cao (s), W. Nazarewicz, and F. Viens (STT)
+%%%
+\item[Description:]  To improve the quality of model-based predictions of nuclear properties of rare isotopes far from stability, we consider the information contained in the residuals in the regions where the experimental information exist.  The emulators of  residuals and CIs defining theoretical error bars are constructed using  GP  and BNN.
+%%%
+\item[FRIB relevance:] The proposed Bayesian approach to extrapolation of nuclear model predictions can be useful for assessing the impact of current and future FRIB experiments. The new capability to evaluate residuals is also expected to impact research in the domains where experiments are currently impossible, for instance, in simulations of the astrophysical $r$ process.
+%%%
+\item[References:] {\it Bayesian approach to model-based extrapolation of nuclear observables}, \href{https://journals.aps.org/prc/abstract/10.1103/PhysRevC.98.034318}{Phys. Rev. C 98, 034318 (2018)} (Editor's Suggestion).
+\end{description}
+%%%
+\end{minipage}
+}
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.65\linewidth]{figures/Sn-sep.pdf}
+\caption{
+Extrapolations of two-neutron separation energies for the even-even Sn chain
+calculated  with DD-PC1 model  with statistical GP and BNN approaches.
+One-sigma and 1.65-sigma CIs are marked.
+}
+\end{figure}
+
+\clearpage
+\newpage
 
 
 \subsubsection{Quantified Limits of the Nuclear Landscape}
@@ -323,7 +352,7 @@ Renormalization Group set of equations and Coupled Cluster theory using deep lea
 }
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=\linewidth]{figures/KRR_CC.pdf}
+\includegraphics[width=0.75\linewidth]{figures/KRR_CC.pdf}
 \caption{Extrapolations to large numbers of interacting fermions for a pairing model using KR methods on Coupled Cluster data.}
 \end{figure}
 \clearpage
