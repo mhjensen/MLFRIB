@@ -1,20 +1,12 @@
-\subsubsection{Boltzmann Machines and the Nuclear Many-Body Problem}
+\subsubsection{Particle identifications in radiation detectors}
 \vspace{5mm}
 \noindent
 \fbox{\begin{minipage}{0.98\linewidth}
 \begin{description}
 %%%
-\item[Participants:] J. Butler (g), Jane Kim (g), S. Bogner, and M Hjorth-Jensen
+\item[Participants:] T. Ladourceur (u), C. Tsang (g), C. Teh (g), R. Wang (p), W. Lynch, M. Tsang
 %%%
-\item[Description:] We have recently started to explore several approaches based on deep
-learning algorithms, with an emphasis on neural networks and so-called
-Boltzmann machines, with several promising results for interacting
-many-fermion systems. Our applications
-so far have been to systems of electrons confined to move in two or
-three-dimensional regions (so-called quantum dots) and systems of
-bosons (weakly and strongly interacting) using a mix of neural network
-based algorithms and variational quantum Monte Carlo approaches. We are in the process of extending these calculations
-to nuclear physics problems. 
+\item[Description:] In nuclear collisions, emitted charged particles are detected by radiation detectors. Particle identification can be obtained from plotting the energy loss vs. total energy or momentum)as shown in the left panel of the figure. We test the machine learning algorithm using Monte Carlo events (right panel) from the TPC. A fully connected, feed-forward neural network classifier is used to separate out the various reaction products from simulated SpiRIT data. Initially, we achieved an accuracy of 88%. With some tuning of the background, we now achieve 97%, 92%, 85%, 77% and 88% for pions, p, d, t, 3He and alpha particles respectively. We are progressing to train and tune the algorithm with real data. We plan to apply the method to identify the PID constructed from data taken with the NSCL High Resolution Array (HiRA)as PID’s are ubiquitous in nuclear physics experiments with the most common ones being the Si-CsI telescopes [Dell19] 
 %%%
 \item[FRIB relevance:] 
 %%%
@@ -25,7 +17,7 @@ to nuclear physics problems.
 }
 \begin{figure}[htb!]
 \includegraphics[width=\linewidth]{figures/quantumdots.pdf}
-\caption{Ground state energies for systems of quantum dots.}}
+\caption{(left panel) Particle identifications from 132Sn+124Sn collisions at E/A=270 MeV measured by the SpiRIT TPC. (Right panel). Particle identifications from Monte Carlo events using Machine learning with Monte Carlo simulated positively charged particles of p+,p,d,t,3He.}
 \end{figure}
 
 ~

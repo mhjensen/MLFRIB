@@ -83,8 +83,8 @@ Please format your entry (1 entry per page) according to the following template:
 \fbox{\begin{minipage}{0.98\linewidth}
 {\bf Topic} (in subsubsection title)
 \begin{description}
-\item[Participants] List local faculty/staff, research associates (p), students (g,u), and external collaborators
-\item[Description] Provide a short paragraph ($<$600 characters; think of a PRL abstract) describing the ML/AI work.
+\item[Participants] List local faculty/staff, research associates (p), students (g,u). External collaborators should be listed as co-authors in references.
+\item[Description] Provide a short paragraph ($<$600 characters; think of a PRL abstract) describing the ML/AI aspects of the project.
 \item[FRIB relevance] ($<$600 characters) 
 \item[Outcomes] List instrumentation outcomes, if any. Provide your published/submitted/anticipated papers with hyperlinks 
 \end{description}
@@ -183,7 +183,8 @@ We list here various acronyms used in the description of the different AI/ML pro
 \fbox{\begin{minipage}{0.96\linewidth}
 \begin{description}
 %%%
-\item[Participants:] Names%%%
+\item[Participants:] 
+%%%
 \item[Description:]
 %%%
 \item[FRIB relevance:] 
@@ -202,16 +203,16 @@ We list here various acronyms used in the description of the different AI/ML pro
 %%%%%%%%%%%%%%%%%%%%%%  Entry Ends %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Detectors}
-\subsubsection{Add title}
+\subsubsection{Gamma-ray Tracking}
 \vspace{5mm}
 \noindent
 \fbox{\begin{minipage}{0.96\linewidth}
 \begin{description}
 %%%
-\item[Participants:] Names%%%
-\item[Description:]
+\item[Participants:] D. Weisshaar, A. Gade, J. Chung
+\item[Description:    ]
 %%%
-\item[FRIB relevance:] 
+\item[FRIB relevance: Improvement  ] 
 %%%
 \item[References:] {\it To be added}, in press/preparation/ or published 
 \end{description}
@@ -244,7 +245,8 @@ from a resonant proton scattering experiment on $^{46}$Ar.
 %%%
 \item[FRIB relevance:] We expect that many of the new FRIB experiments will produce large amounts of data. A class of detectors such as the AT-TPC is able to detect several reaction channels simultaneously. Extracting low cross section channels requires to classify the events of interest, which requires a large degree of automation. We expect that these techniques will play a central role at FRIB. 
 %%%
-\item[References:] {\it Machine learning methods for track classification in the AT-TPC}, \href{https://doi.org/10.1016/j.nima.2019.05.097}{Nucl. Inst. Meth. A940 (2019) 56-167}
+\item[References:] {\it Machine learning methods for track classification in the AT-TPC},  M.P.Kuchera, R.Ramanujan, J.Z.Taylor, R.R.Strauss, D.Bazin, J.Bradt, R.M. Chen,
+\href{https://doi.org/10.1016/j.nima.2019.05.097}{Nucl. Inst. Meth. A 940, 56 (2019)}
 \end{description}
 %%%
 \end{minipage}
@@ -275,14 +277,14 @@ axes have arbitrary non-informative units.}
 %%%
 \item[FRIB relevance:] The proposed Bayesian SL approach to extrapolation of nuclear model predictions can be useful for assessing the impact of current and future FRIB experiments. The new capability to evaluate residuals is also expected to impact research in the domains where experiments are currently impossible, for instance, in simulations of the astrophysical $r$ process.
 %%%
-\item[References:] {\it Bayesian approach to model-based extrapolation of nuclear observables}, \href{https://journals.aps.org/prc/abstract/10.1103/PhysRevC.98.034318}{Phys. Rev. C 98, 034318 (2018)} (Editor's Suggestion).
+\item[References:] {\it Bayesian approach to model-based extrapolation of nuclear observables}, L. Neufcourt, Y. Cao, W. Nazarewicz, and F. Viens, \href{https://journals.aps.org/prc/abstract/10.1103/PhysRevC.98.034318}{Phys. Rev. C 98, 034318 (2018)} (Editor's Suggestion).
 \end{description}
 %%%
 \end{minipage}
 }
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.65\linewidth]{figures/Sn-sep.pdf}
+\includegraphics[width=0.63\linewidth]{figures/Sn-sep.pdf}
 \caption{
 Extrapolations of two-neutron separation energies for the even-even Sn chain
 calculated  with DD-PC1 model  with statistical GP and BNN approaches.
@@ -300,14 +302,14 @@ One-sigma and 1.65-sigma CIs are marked.
 \fbox{\begin{minipage}{0.96\linewidth}
 \begin{description}
 %%%
-\item[Participants:] L. Neufcourt (p), Y. Cao (g), S.A. Giuliani (p), W. Nazarewicz, O.B. Tarasov, and E. Olsen (ULB)
+\item[Participants:] L. Neufcourt (p), Y. Cao (g), S.A. Giuliani (p), W. Nazarewicz, and O.B. Tarasov
 %%%
 \item[Description:] We use microscopic nuclear global mass models and Bayesian SL methodology to provide quantified predictions of proton and neutron separation energies  as well as Bayesian probabilities of existence
  throughout the nuclear landscape all the way to the particle drip lines. To account for uncertainties, Bayesian GP are trained on the separation-energy residuals for each individual model, and the resulting  predictions are  combined via BMA. This framework allows to account for systematic and statistical uncertainties and propagate them to extrapolative predictions. 
 %%%
 \item[FRIB relevance:] Considering the anticipated  FRIB production rates and uncertainties of theoretical predictions, we identified  regions, reached by FRIB, that are crucial for constraining theoretical mass models.
 %%%
-\item[References:] {\it Beyond the proton drip line: Bayesian analysis of proton-emitting nuclei}, \href{https://journals.aps.org/prc/abstract/10.1103/PhysRevC.101.014319}{Phys. Rev. C 101, 014319 (2020)}; {\it Quantified limits of the nuclear landscape}, \href{https://arxiv.org/abs/2001.05924}{arXiv:2001.05924, submitted}.
+\item[References:] {\it Beyond the proton drip line: Bayesian analysis of proton-emitting nuclei}, L. Neufcourt, Y. Cao, S. Giuliani, W. Nazarewicz,  E. Olsen, and O.B. Tarasov \href{https://journals.aps.org/prc/abstract/10.1103/PhysRevC.101.014319}{Phys. Rev. C 101, 014319 (2020)}; {\it Quantified limits of the nuclear landscape}, \href{https://arxiv.org/abs/2001.05924}{arXiv:2001.05924, submitted}.
 \end{description}
 %%%
 \end{minipage}
@@ -335,7 +337,7 @@ the experimental reach of  FRIB.
 \fbox{\begin{minipage}{0.96\linewidth}
 \begin{description}
 %%%
-\item[Participants:] J. Butler (g), Jane Kim (g), O Udiani (g), S. Bogner, H. Hergert and M Hjorth-Jensen
+\item[Participants:] J. Butler (g), Jane Kim (g), O Udiani (g), S. Bogner, H. Hergert, and M Hjorth-Jensen
 %%%
 \item[Description:] ML methods offer several possibilities to
 circumvent the curse of  increasing dimensionality, as well as
@@ -396,13 +398,13 @@ to nuclear physics problems.
 \fbox{\begin{minipage}{0.98\linewidth}
 \begin{description}
 %%%
-\item[Participants:] S. König (TU Darmstadt/NCSU), A. Ekström (Chalmers), K. Hebeler (TU Darmstadt), D. Lee, and A. Schwenk (TU Darmstadt) 
+\item[Participants:] D. Lee
 %%%
-\item[Description:] In applications of machine learning and uncertainty quantification to first principles nuclear many-body theory, one important tool is a fast and accurate emulator that removes the need for repeatedly performing computationally-expensive calculations.  We show that eigenvector continuation can fill this role quite nicely.
+\item[Description:] In applications of machine learning and uncertainty quantification to first principles nuclear many-body theory, one important tool is a fast and accurate emulator that removes the need for repeatedly performing computationally-expensive calculations.  We show that eigenvector continuation can fill this role quite nicely.  In addition to its applications as an emulator, eigenvector continuation can also be trained as a machine learning method for the quantum many-body problem using optimized variational subspaces. 
 %%%
 \item[FRIB relevance:] One of the fundamental challenges in FRIB science is understanding the connection between microscopic nuclear forces and nuclear structure.  Having a fast and accurate emulator makes it possible to apply machine learning and uncertainty quantification to uncover the correlations between nuclear forces and structure.
 %%%
-\item[References:] {\it Eigenvector Continuation as an Efficient and Accurate Emulator for Uncertainty Quantication in Nuclear Systems},  \href{https://arxiv.org/abs/1909.08446}{arXiv:1909.08446, submitted}.
+\item[References:] {\it Eigenvector Continuation as an Efficient and Accurate Emulator for Uncertainty Quantication in Nuclear Systems}, S. König, A. Ekström, K. Hebeler, D. Lee, and A. Schwenk, \href{https://arxiv.org/abs/1909.08446}{arXiv:1909.08446, submitted}.
 \end{description}
 %%%
 \end{minipage}
@@ -421,13 +423,13 @@ to nuclear physics problems.
 \fbox{\begin{minipage}{0.98\linewidth}
 \begin{description}
 %%%
-\item[Participants:] J. Bonitati (g), G. Given (g), Da. Lee (Cornell Tech/Samsung Research), and De. Lee
+\item[Participants:] J. Bonitati (g), G. Given (g), and D. Lee
 %%%
 \item[Description:] We are using BM to uncover and quantify multi-nucleon correlations in supercomputer lattice data obtained from lattice simulations of atomic nuclei.  The work involves the development of new algorithms to bypass the computational bottleneck of computing the overall normalization of the partition function and dealing with negative weight configuration produced in the quantum simulations.
 %%%
 \item[FRIB relevance:] We would like to understand the microscopic origins of nuclear clustering across the nuclear chart.  As the phenomenon of clustering is accentuated near open thresholds, these studies are of direct relevance to FRIB science.
 %%%
-\item[References:] {\it Machine Learning Multi-Nucleon Correlations from First Principles}, in preparation.
+\item[References:] {\it Machine Learning Multi-Nucleon Correlations from First Principles}, J. Bonitati, G. Given, Da. Lee, and D. Lee, in preparation.
 \end{description}
 %%%
 \end{minipage}
