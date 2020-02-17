@@ -130,7 +130,7 @@ Some of the most common tasks are:
 These categories are all part of the broad spectrum of AI and ML techniques being studied at FRIB. 
 
 
-\subsection{Glossary of machine learning/statistical terms used}
+\subsection{Acronyms of machine learning/statistical terms used}
 
 We list here various acronyms used in the description of the different AI/ML projects.
 
@@ -157,7 +157,7 @@ We list here various acronyms used in the description of the different AI/ML pro
 \item[LR] Logistic regression
 \item[LSTM] Long short-term memory
 \item[MCMC] Markov chain Monte Carlo
-\item[ML] Machine Learning
+\item[ML] Machine learning
 \item[NN] Neural networks
 \item[PCA] Principal component analysis and dimensionality reduction techniques
 \item[REG] Linear regression 
@@ -368,12 +368,11 @@ Renormalization Group set of equations and Coupled Cluster theory using DL algor
 %%%
 \item[Participants:] J. Butler (g), Jane Kim (g), S. Bogner, and M Hjorth-Jensen
 %%%
-\item[Description:] We have recently started to explore several approaches based on DL algorithms, with an emphasis on neural networks and so-called
-Boltzmann machines, with several promising results for interacting
+\item[Description:] We have recently started to explore several approaches based on DL algorithms, with an emphasis on NN and BM, with several promising results for interacting
 many-fermion systems. Our applications
 so far have been to systems of electrons confined to move in two or
 three-dimensional regions (so-called quantum dots) and systems of
-bosons (weakly and strongly interacting) using a mix of neural network
+bosons (weakly and strongly interacting) using a mix of NN
 based algorithms and variational quantum Monte Carlo approaches. We are in the process of extending these calculations
 to nuclear physics problems.
 %%%
@@ -387,6 +386,56 @@ to nuclear physics problems.
 \begin{figure}[htb!]
 \includegraphics[width=\linewidth]{figures/quantumdots.pdf}
 \caption{Ground state energies for systems of quantum dots.}
+\end{figure}
+
+\clearpage\newpage
+
+\subsubsection{Emulators for the Nuclear Many-Body Problem}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{0.98\linewidth}
+\begin{description}
+%%%
+\item[Participants:] S. König (TU Darmstadt/NCSU), A. Ekström (Chalmers), K. Hebeler (TU Darmstadt), D. Lee, and A. Schwenk (TU Darmstadt) 
+%%%
+\item[Description:] In applications of machine learning and uncertainty quantification to first principles nuclear many-body theory, one important tool is a fast and accurate emulator that removes the need for repeatedly performing computationally-expensive calculations.  We show that eigenvector continuation can fill this role quite nicely.
+%%%
+\item[FRIB relevance:] One of the fundamental challenges in FRIB science is understanding the connection between microscopic nuclear forces and nuclear structure.  Having a fast and accurate emulator makes it possible to apply machine learning and uncertainty quantification to uncover the correlations between nuclear forces and structure.
+%%%
+\item[References:] {\it Eigenvector Continuation as an Efficient and Accurate Emulator for Uncertainty Quantication in Nuclear Systems},  \href{https://arxiv.org/abs/1909.08446}{arXiv:1909.08446, submitted}.
+\end{description}
+%%%
+\end{minipage}
+}
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=8cm]{figures/few_body_grid_subset.pdf}
+\caption{Correlations among several observables for $^2$H and $^4$He computed using eigenvector continuation.}
+\end{figure}
+
+\clearpage\newpage
+
+\subsubsection{Machine Learning Multi-Nucleon Correlations}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{0.98\linewidth}
+\begin{description}
+%%%
+\item[Participants:] J. Bonitati (g), G. Given (g), Da. Lee (Cornell Tech/Samsung Research), and De. Lee
+%%%
+\item[Description:] We are using BM to uncover and quantify multi-nucleon correlations in supercomputer lattice data obtained from lattice simulations of atomic nuclei.  The work involves the development of new algorithms to bypass the computational bottleneck of computing the overall normalization of the partition function and dealing with negative weight configuration produced in the quantum simulations.
+%%%
+\item[FRIB relevance:] We would like to understand the microscopic origins of nuclear clustering across the nuclear chart.  As the phenomenon of clustering is accentuated near open thresholds, these studies are of direct relevance to FRIB science.
+%%%
+\item[References:] {\it Machine Learning Multi-Nucleon Correlations from First Principles}, in preparation.
+\end{description}
+%%%
+\end{minipage}
+}
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=7cm]{figures/training_data.pdf}
+\caption{Sample training data used for machine learning multi-nucleon correlations in $^{16}$O.}
 \end{figure}
 
 \clearpage\newpage
@@ -415,6 +464,7 @@ to nuclear physics problems.
 \end{figure}
 \clearpage
 \newpage
+
 
 
 \section{Education and Workforce}
