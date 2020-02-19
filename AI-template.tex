@@ -338,15 +338,10 @@ the experimental reach of  FRIB.
 %%%
 \item[Participants:] J. Butler (g), Jane Kim (g), O Udiani (g), S. Bogner, H. Hergert, and M Hjorth-Jensen
 %%%
-\item[Description:] ML methods offer several possibilities to
-circumvent the curse of  increasing dimensionality, as well as
-allowing us to model quantum mechanical systems with less a priori
-knowledge. For complex many-body systems like those which arise in
-nuclear physics (in particular with the increase in the number of
-degrees of freedom for nuclei close to their limits of stability), this is a very interesting avenue to explore.   We have recently explored  the solution of the Similarity
-Renormalization Group set of equations and Coupled Cluster theory using DL algorithms, with a great deal of success using RNNs and LSTM based approaches, as well as KR based methods. Preliminary studies of infinite nuclear matters holds great promise for handling systems of large numbers of particles.
+\item[Description:] ML methods make it possible to tackle the curse of dimensionality and allow us to model quantum mechanical systems with less a priori knowledge. For complex many-body systems like nuclei (especially those at the limits of stability) or nuclear matter, this is a very interesting avenue to explore.  We have recently applied DL methods --- particular RNNs, LSTM and KRR --- to Similarity
+Renormalization Group flows and the solution of Coupled Cluster theory, with a great deal of success. Our preliminary studies hold great promise for handling systems with large numbers of particles (including nuclear matter) or basis states (e.g. due to deformation or continuum coupling).
 %%%
-\item[FRIB relevance:]  The ability to study theoretically nuclei at the limits of stability is a great challenge due to the increased number of degrees of freedom. These systems are highly relevant for the scientific program of FRIB. 
+\item[FRIB relevance:]  Theoretical studies of nuclei at the limits of stability are a great challenge due to the large number of degrees of freedom. These systems are highly relevant for the scientific program of FRIB. Our early results also suggest connections between RG methods and Deep Learning that will contribute to a better understanding of Machine Learning methods.
 %%%
 \item[References:] {\it Recurrent Neural Networks and the Nuclear Many-body Problem}, in preparation
 \end{description}
@@ -356,7 +351,8 @@ Renormalization Group set of equations and Coupled Cluster theory using DL algor
 \begin{figure}[htb!]
 \centering
 \includegraphics[width=0.75\linewidth]{figures/KRR_CC.pdf}
-\caption{Extrapolations to large numbers of interacting fermions for a pairing model using KR methods on Coupled Cluster data.}
+\vspace{-8pt}
+\caption{Extrapolations to large numbers of interacting fermions for a pairing model using KRR methods on Coupled Cluster data.}
 \end{figure}
 \clearpage
 \newpage
