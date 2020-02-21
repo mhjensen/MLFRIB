@@ -72,7 +72,7 @@ Machine Learning and Artificial Intelligence activities at FRIB
 \section{Explanation}
 
 
-The purpose of this document is to collect information about the  competence  in the area of ML/AI at FRIB Laboratory. This is input is important to inform the upcoming events, e.g.,  \href{https://www.jlab.org/conference/AI2020}{\it AI for Nuclear Physics Workshop} at JLab, March 4-6, 2020; \href{https://conferences.lbl.gov/event/292/}{\it Workshop for Applied Nuclear Data Activities} at George Washington University, March 3-5, 2020;
+The purpose of this document is to collect information about the  competence  in the area of ML/AI at FRIB Laboratory. This material is important to inform the upcoming events, e.g.,  \href{https://www.jlab.org/conference/AI2020}{\it AI for Nuclear Physics Workshop} at JLab, March 4-6, 2020; \href{https://conferences.lbl.gov/event/292/}{\it Workshop for Applied Nuclear Data Activities} at George Washington University, March 3-5, 2020;
 and other related  activities.
 
 
@@ -262,6 +262,35 @@ axes have arbitrary non-informative units.}
 \clearpage
 \newpage
 
+\subsubsection{Particle identifications in radiation detectors}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{0.98\linewidth}
+\begin{description}
+%%%
+\item[Participants:] T. Ladourceur (u), C.Y. Tsang (g),  W.G. Lynch, M.B. Tsang
+%%%
+\item[Description:] In nuclear collisions, physics information is obtained from emitted charged particles measured with radiation detectors.  Identification of the emitted particles can be obtained from plotting the energy loss vs. total energy or momentum) as shown in the left panel of the figure. The data was obtained from SpiRIT Time Projection Chamber. We test the machine learning algorithm using Monte Carlo events (right panel) from the TPC. A fully connected, feed-forward neural network classifier is used to separate out the various reaction products from simulated S$\pi$RIT data. Initially, we achieved an accuracy of $88\%$. However, with some tuning of the background, we now achieve $97\%$, $92\%$, $85\%$, $77\%$ and $88\%$ for pions, p, d, t, $^3$He and $\alpha$ particles respectively. We are progressing to train and tune the algorithm with real data. We will extend the method to identify the PID lines constructed from data taken with the NSCL High Resolution Array (HiRA). 
+%%%
+\item[FRIB relevance:] Machine Learning tools and strategy must be developed for fast particle identifications to facilitate the tremendous increased amount of acquired data in FRIB experiments.
+%%%
+\item[References:] {\it Non-linearity effects on the light-output calibration of light charged particles in CsI(Tl) scintillator crystals}, D. Dell'Aquila, S. Sweany,   et al., \href{https://doi.org/10.1016/j.nima.2019.03.065}{Nucl. Instrum. Methods Phys. Res. A 929 (2019) 162-172}.
+%%%
+\end{description}
+%%%
+\end{minipage}
+}
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.49\linewidth]{figures/pid_sTPC_data.pdf}
+\includegraphics[width=0.49\linewidth]{figures/pid_sTPC_monte_carlo.pdf}
+\caption{
+(left panel) Particle identifications from $^{132}$Sn+$^{124}$Sn collisions at 270 MeV/u measured with the S$\pi$RIT TPC. (Right panel). Particle identifications from Monte Carlo events using Machine learning for $\pi^+$, p, d, t, 3He.
+}
+\end{figure}
+\clearpage
+\newpage
 
 
 \subsection{Basic Research}
@@ -295,8 +324,72 @@ One-sigma and 1.65-sigma CIs are marked.
 
 \clearpage
 \newpage
+\subsubsection{Bayesian approach to constraint parameters of the Equation of State}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{0.98\linewidth}
+\begin{description}
+\item[Participants:] C.Y. Tsang (g), W.G. Lynch, M.B. Tsang
+%%%
+\item[Description:] 
+Transport model theory predicts that ratios of neutron and proton energy spectra provide constraints on the density and momentum dependencies of the isovector mean-field potential. To extract the parameters of the equation of state, ($\rho$, S($\rho$), $m_n^*$, $m_p^*$ corresponding to density,  symmetry energy,  neutron and proton effective masses, respectively), we compare single and double n/p ratios obtained from central collisions of $^{112}$Sn+$^{112}$Sn and $^{124}$Sn+$^{124}$Sn at 120 MeV/u to a transport model calculations. Using Bayesian analysis which samples millions of parameter sets, we obtain the 1 and 2 sigma contours of the density dependence of the symmetry energy (see figure). For the effective mass, the results are more ambiguous. We need better data especially at higher kinetic energy where sensitivity to the effective mass splitting is larger.
+%%%
+\item[FRIB relevance:] Determining the nuclear equation of state is an important component of the FRIB science.
+%%%
+\item[References:] { {\it Constraining the symmetry energy with heavy-ion collisions and Bayesian analyses}, P. Morfouace, C.Y. Tsang, Y.Zhang, W.G. Lynch, M.B.Tsang, et al., \href{https://doi.org/10.1016/j.physletb.2019.135045}{Phys. Lett. B 799 135045 (2019)} }.
+\end{description}
+%%%
+\end{minipage}
+}
 
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.87\linewidth]{figures/Pierre_contour.pdf}
+\caption{
+Density dependence of the symmetry energy S($\rho$).  The color areas correspond to the symmetry energy
+versus density of the $1\sigma$ (brown) and $2\sigma$ (blue) contours from Bayesian analysis of single and double ratios of central collisions of $^{112}$Sn+$^{112}$Sn and $^{124}$Sn+$^{124}$Sn at 120 MeV/u. Symbols are data from different experiments.
+}
+\end{figure}
+\clearpage
+\newpage
 
+\subsubsection{Bayesian approach to study the correlations of neutron star deformability and Equation of State parameters}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{0.98\linewidth}
+\begin{description}
+\item[Participants:] C.Y. Tsang (g) and M.B. Tsang
+%%%
+\item[Description:] 
+We use a Bayesian inference analysis to explore the sensitivity of Taylor expansion parameters of
+the nuclear equation of state (EOS) to the neutron star dimensionless tidal deformability ($\Lambda$) obtained
+from the neutron star merger event GW170817. To avoid correlations between the expansion
+parameters, we use a prior distributions based on a recently published meta-modeling approach.
+However, we find that assumptions in the prior distribution strongly
+influence the constraints on $\Lambda$.
+The sensitivity study is extended beyond the canonical neutron star with 1.4 solar mass. For neutron
+star with mass < 1.6 solar mass, L$_sym$ and K$_sym$ are highly correlated with the tidal deformability.
+For more massive neutron stars, the tidal deformability is more strongly correlated with higher order
+Taylor expansion parameters. 
+%%%
+\item[FRIB relevance:] Investigating dense nuclear matter on earth and in heavens is one of the major objective in  FRIB science.
+%%%
+\item[References:] { {\it Insights on Skyrme parameters from GW170817}, C. Y. Tsang, M. B. Tsang, P. Danielewicz, F. J. Fattoyev,and W. G. Lynch, \href{https://doi.org/10.1016/j.physletb.2019.05.055}{Phys. Lett. B 796 1 (2019)} }.
+\end{description}
+%%%
+\end{minipage}
+}
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=1.0\linewidth]{figures/lamda_LKQ.pdf}
+\caption{
+Bivariate distributions between neutron star deformabilities ($\Lambda$) and Taylor expansion parameters, $L, K$ and $Q$ and pressure at twice normal nuclear matter density, $P(2\rho_0)$ for neutron stars with different masses.
+}
+\end{figure}
+\clearpage
+
+\newpage
 \subsubsection{Nuclear Landscape with Bayesian Model Averaging}
 \vspace{5mm}
 \noindent
@@ -338,7 +431,7 @@ the experimental reach of  FRIB.
 \fbox{\begin{minipage}{0.96\linewidth}
 \begin{description}
 %%%
-\item[Participants:] J. Butler (g), Jane Kim (g), O Udiani (g), S. Bogner, H. Hergert, and M Hjorth-Jensen
+\item[Participants:] J. Hartley (g), J. Kim (g), O. Udiani (g), S. Bogner, H. Hergert, and M Hjorth-Jensen
 %%%
 \item[Description:] ML methods make it possible to tackle the curse of dimensionality and allow us to model quantum mechanical systems with less a priori knowledge. For complex many-body systems like nuclei (especially those at the limits of stability) or nuclear matter, this is a very interesting avenue to explore.  We have recently applied DL methods --- particular RNNs, LSTM and KRR --- to Similarity
 Renormalization Group flows and the solution of Coupled Cluster theory, with a great deal of success. Our preliminary studies hold great promise for handling systems with large numbers of particles (including nuclear matter) or basis states (e.g. due to deformation or continuum coupling).
@@ -365,7 +458,7 @@ Renormalization Group flows and the solution of Coupled Cluster theory, with a g
 \fbox{\begin{minipage}{0.98\linewidth}
 \begin{description}
 %%%
-\item[Participants:] J. Butler (g), Jane Kim (g), S. Bogner, and M Hjorth-Jensen
+\item[Participants:] J. Hartley (g), J. Kim (g), S. Bogner, and M Hjorth-Jensen
 %%%
 \item[Description:] We have recently started to explore several approaches based on DL algorithms, with an emphasis on NN and BM, with several promising results for interacting
 many-fermion systems. Our applications
@@ -437,6 +530,64 @@ to nuclear physics problems.
 \caption{Sample training data used for machine learning multi-nucleon correlations in $^{16}$O.}
 \end{figure}
 
+
+\subsubsection{Establishing a statistical approach to nuclear reactions}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{0.98\linewidth}
+\begin{description}
+%%%
+\item[Participants:] F.M. Nunes, A. Lovell, G. King 
+%%%
+\item[Description:] The few-body group has been exploring statistical methods in nuclear reactions. 
+In 2018 we compared, directly and systematically, the frequentist and Bayesian approaches to quantifying uncertainties in direct nuclear reactions. Our study demonstrated that the uncertainties on the reaction observables considered  within the Bayesian approach  represent reality more accurately than the much narrower uncertainties obtained using the standard frequentist approach.
+%%%
+\item[FRIB relevance:] To interpret reaction data from FRIB, we need to reliably quantify the uncertainties in the nuclear theories used. 
+%%%
+\item[References:] G. B. King, A. E. Lovell, L. Neufcourt, and F. M. Nunes,
+Phys. Rev. Lett. 122, 232502 (2019).
+\end{description}
+%%%
+\end{minipage}
+}
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=5cm]{figures/48cap25-100k-scatter.png}
+\caption{Posterior distributions for the parameters (diagonal) and scatter plots for the correlations between parameters: Bayesian are shown in shades of orange and frequentist in shades of blue for $^{48}$Ca(p,p) at 25 MeV. Depths are in MeV and radii and difuseness are in fm.}
+\end{figure}
+
+
+\subsubsection{Bayesian approach to nuclear reactions and Experimental Design}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{0.98\linewidth}
+\begin{description}
+%%%
+\item[Participants:] F.M. Nunes, A. Lovell, G. King and M. Catacora-Rios
+%%%
+\item[Description:]  
+
+In recent work we study the uncertainties of optical model parameters and its dependence on the angular grid of the differential cross section, the inclusion of cross section data at nearby energies, and changes in the experimental error bars.  We also study the effect on the resulting uncertainty when total reaction cross sections are included in the fitting procedure. 
+
+In the last years, we have been expanding our methods to include the principle component analysis and Bayesian Evidence to identify the optimum experimental conditions and the best combination of observables to reduce the uncertainty on the resulting cross sections. Once this is completed, we plan to use these statistical tools to make model comparisons and eventually, if it makes sense, to perform model mixing.
+%%%
+\item[FRIB relevance:] To plan reactions measurements at FRIB it is important to know what are the optimum conditions and the optimum observables (or combination of observables) that provide maximum information content. 
+%%%
+\item[References:]  M. Catacora-Rios, G. B. King, A. E. Lovell, and F. M. Nunes
+Phys. Rev. C 100, 064615 (2019).
+\end{description}
+%%%
+\end{minipage}
+}
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=5cm]{figures/208Pbdpdatathinningpanel.png}
+\caption{A comparison of results using the full angular range (blue solid line)  with those where only forward angles are used (orange dashed) or half of the data points are considered (green dotted): a) and b)  $^{208}$Pb(n,n) at 30 MeV 95$\%$ confidence intervals and percentage uncertainty plot;
+ c) and d)  $^{208}$Pb(p,p) at 30 MeV 95$\%$ confidence intervals and percentage uncertainty plot; 
+ e) and f)  $^{208}$Pb(p,p) at 61 MeV 95$\%$ confidence intervals and percentage uncertainty plot;
+ and g) and h) $^{208}$Pb(d,p) at 61 MeV 95$\%$ confidence intervals and percentage uncertainty plot.}
+\end{figure}
+
 \clearpage\newpage
 
 
@@ -501,6 +652,68 @@ We initiated the series of meetings on {\it Enhancing the interaction between nu
 
 Please format your entry (1 entry per page) according to the following template:
 
+
+\subsubsection{Particle reconstruction of Time Projection Chamber}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{0.98\linewidth}
+\begin{description}
+%%%
+\item[Participants:] C. Tsang (g),  W. Lynch, M. Tsang
+%%%
+\item[Description:] To investigate the ``nature of neutron-rich matter in the cosmos and on earth'' is one of the scientific objective laid out in the 2015 NSAC Long Range Plan. With the energy and the availability of rare isotope beams, FRIB and FRIB400 are poised to study the Equation of State of asymmetric matter. One observable to study the EoS is to compare the relative emission of members of isospin multiplets, e.g. $\pi^-$ vs. $\pi^+$, $n$ vs. $p$, $t$ vs. $^3\mathrm{He}$, etc., which experience symmetry potentials and symmetry forces of opposite sign. Time projection chamber (TPC) provides large coverage to detect charged particles including pions emitted in heavy ion collisions (See figure). However, with mean multiplicity of 50 in the example shown, it becomes a challenge to reconstruct particle tracks, identify and accurately determine the momenta of the particles. We are looking into applying machine learning reconstruction algorithms pioneered in high energy physics. 
+%%%
+\item[FRIB relevance:]  The SpiRIT TPC (funded by DOE) will be moved from RIKEN to FRIB. At FRIB, the TPC, placed inside the HRS will be the anchor detector for the Equation of State program at FRIB and FRIB400. Both online and offline analysis of TPC data will require fast and accurate reconstruction of the particle tracks.
+%%%
+\item[References:] {\it S$\pi$RIT: A time-projection chamber for symmetry-energy studies}, R. Shane, A.B. McIntosh, T. Isobe, W.G. Lynch, et al., \href{https://doi.org/10.1016/j.nima.2015.01.026}{Nucl. Instrum. Methods Phys. Res. A 784 (2015) 513-517}.
+%%%
+\end{description}
+%%%
+\end{minipage}
+}
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.45\linewidth]{figures/tracks_top_view.pdf}
+\includegraphics[width=0.45\linewidth]{figures/tracks_3d_view.pdf}
+\caption{
+Tracks from two different events from 132Sn+124Sn collisions as viewed from the top (left panel) and 3D (right panel). The big spiral in the left panel is an emitted low energy $\pi^-$.
+}
+\end{figure}
+\clearpage
+\newpage
+
+
+\subsubsection{Pulse shape discrimination from digitized waveforms}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{0.98\linewidth}
+\begin{description}
+%%%
+\item[Participants:] F.C.E. Teh (g), T. Ladourceur (u), C.Y. Tsang (g), M.B. Tsang
+%%%
+\item[Description:] With the advancement of digital electronics, we are able to record the waveforms of the signal pulses directly. That allows automation and innovation in data analysis. Depending on the detector materials, waveforms may contain information about the particle types and the corresponding energy. The figure below shows the waveforms identified using traditional method that distinguish neutrons from gammas detected by a large array made from organic liquid scintillator from an experiment at NSCL. The pulse shape depends on the position of the detector where the radiation hit. It is a complicated multi-correlation problem suitable for developing machine learning algorithm using separate data for training and validating.
+%%%
+\item[FRIB relevance:] Digital electronics  produces large amount of information and are increasingly used in nuclear physics experiments including experiments in FRIB. To exploit the full potential of digial electronics, fast ML algorithms must be developed to classify pulse shapes for different particle types in online or offline analysis.
+%%%
+\item[References:] {\it Value-assigned pulse shape discrimination for neutron detectors}, F.C.E. Teh, J.-W. Lee, K. Zhu, K.W. Brown, et al., \href{https://arxiv.org/abs/2001.07518}{arXiv:2001.07518}.
+%%%
+\end{description}
+%%%
+\end{minipage}
+}
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.49\linewidth]{figures/psd_median_pulse_shapes.pdf}
+\includegraphics[width=0.49\linewidth]{figures/psd_2d_vpsd.pdf}
+\caption{
+(Left panel) Waveforms recorded by the Large Area Neutron Detector (LANA).  (Right panel) Valued-assigned pulse shape discrimination (VPSD) method developed to better discriminate neutrons and gamma.
+}
+\end{figure}
+\clearpage
+\newpage
+
 \vspace{5mm}
 \noindent
 \fbox{\begin{minipage}{0.98\linewidth}
@@ -517,3 +730,4 @@ You are encouraged to provide a figure below the description.
 
 
 \end{document}
+
