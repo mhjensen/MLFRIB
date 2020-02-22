@@ -155,6 +155,7 @@ We list here various acronyms used in the description of the different AI/ML pro
 \item[FS] Frequentist statistics
 \item[GM] Graphical models
 \item[GP] Bayesian Gaussian processes
+\item[LHC] Large Hadron Collider at CERN
 \item[KR] Kernel regression
 \item[LR] Logistic regression
 \item[LSTM] Long short-term memory
@@ -165,6 +166,7 @@ We list here various acronyms used in the description of the different AI/ML pro
 \item[REG] Linear regression 
 \item[RL] Reinforcement learning
 \item[RNN] Recurrent neural networks
+\item[RHIC] Relativistic Heavy Ion Collider at Brookhaven Natl. lLdk
 \item[SL] Supervised learning
 \item[SVM] Support vector machines
 \item[UQ] Uncertainty quantification
@@ -211,15 +213,19 @@ We list here various acronyms used in the description of the different AI/ML pro
 \noindent
 \fbox{\begin{minipage}{0.98\linewidth}
 \begin{description}
-\item[Participants] F. Montes, H. Schatz,  K. Hermansen (g), S. Ayoub (g). 
-\item[Description] The primary purpose of the The SEparator for CApture Reactions (SECAR) at FRIB is to measure resonance strengths in radiative proton and alpha capture reactions for astrophysics. Online optimization techniques have shown to be successful at producing ion optical performance beyond what is achievable by the use of ion optical models of a beam system combined with intuition-driven manual tuning. Experimental optimizer studies were the first technique to produce nearly 100\% transmission through the target aperture at the SECAR target system. Preliminary SECAR optimization simulations have also shown that such a technique can also be used to produce an achromatic dispersive image in SECAR by using online optimization approaches such as a GP, NN and/or Particle Swarm method. We plan to test automated optimization to correctly tune the incoming beam into the SECAR system and to find a method independent way to minimize the beam-spot size at different critical positions in SECAR, which is critical to maximizing SECAR performance. 
-\item[FRIB relevance] Automated optimization is expected to reduce tuning time and improve consistency in SECAR performance. Similar techniques may be applicable to other FRIB accelerator and beam-line systems. 
+\item[Participants] F. Montes, H. Schatz,  K. Hermansen (g), S. Ayoub (g), D. Crisp, T. Summers and A.M. Amthor (Bucknell)
+\item[Description] The primary purpose of the The SEparator for CApture Reactions (SECAR) at FRIB is to measure resonance strengths in radiative proton and alpha capture reactions for astrophysics. We have developed and tested systems to interpret data in real-time from existing spectrometer and beam-line systems to tune multiple elements to provide desired beam properties without providing the autonomous system a theoretical model of the particle-optical system being tuned. 
+%This autonomous beam tuning was the first technique to produce nearly 100\% transmission through the target aperture in the SECAR target system. 
+Preliminary SECAR optimization simulations have shown that such a technique can also be used to produce an achromatic dispersive image in SECAR by using autonomous optimization approaches such as a GP, NN and/or the Particle Swarm method. We are now working toward a further test of the automated optimization to 
+%correctly tune the incoming beam into SECAR and to <We already did this, no?>
+independently minimize the beam-spot size at different critical positions in SECAR, thus maximizing beam purity and mass resolving power, which are critical to maximizing the scientific productivity of SECAR. 
+\item[FRIB relevance] Automated optimization is expected to reduce tuning time and improve quality and consistency of SECAR performance. These techniques are also applicable to other FRIB accelerator, beam-line, and spectrometer systems. 
 \item[References:] {\it Experimental test of an online ion-optics optimizer,  Amthor A.~M., Schillaci Z.~M., Morrissey D.~J., Portillo M., Schwarz S., Steiner M., Sumithrarachchi C.}
 \href{https://ui.adsabs.harvard.edu/link_gateway/2018NIMPA.895...90A/doi:10.1016/j.nima.2018.04.001}{Nuc. Inst. and Meth. in Phys. Res. A, 895, 90 (2018)}
 \end{description}
 \end{minipage}}
 
-\begin{SCfigure}[10][b]
+\begin{SCfigure}[1][b]
 \centering
 \includegraphics[width=0.55\linewidth]{figures/SECAR_optimization.pdf}
 \caption{SECAR mass resolution as a function of the number steps in the optimization. Each step corresponds to a different optics configuration.}
@@ -330,9 +336,9 @@ electron(s) corresponding initial position(s).
 %%%
 \item[Participants:] T. Ladourceur (u), C.Y. Tsang (g),  W.G. Lynch, M.B. Tsang
 %%%
-\item[Description:] In nuclear collisions, physics information is obtained from emitted charged particles measured with radiation detectors.  Identification of the emitted particles can be obtained from plotting the energy loss vs. total energy or momentum) as shown in the left panel of the figure. The data was obtained from SpiRIT Time Projection Chamber. We test the ML algorithm using Monte Carlo events (right panel) from the TPC. A fully connected, feedforward NN classifier is used to separate out the various reaction products from simulated S$\pi$RIT data. Initially, we achieved an accuracy of $88\%$. However, with background tuning, we now achieve $97\%$, $92\%$, $85\%$, $77\%$ and $88\%$ for pions, p, d, t, $^3$He and $\alpha$ particles respectively. We are progressing to train and tune the algorithm with real data. We will extend the method to identify the PID lines constructed from data taken with the NSCL High Resolution Array (HiRA). 
+\item[Description:] In nuclear collisions, physics information is obtained from emitted charged particles measured with radiation detectors.  Identification of the emitted particles (PID) can be obtained from plotting the energy loss vs. total energy or momentum) as shown in the left panel of the figure. The data was obtained from S$\pi$RIT Time Projection Chamber. We test the ML algorithm using Monte Carlo events (right panel) from the TPC. A fully connected, feedforward NN classifier is used to separate out the various reaction products from simulated S$\pi$RIT data. Initially, we achieved an accuracy of $88\%$. However, with background tuning, we now achieve $97\%$, $92\%$, $85\%$, $77\%$ and $88\%$ for $\pi$, p, d, t, $^3$He and $\alpha$ particles respectively. We plan to train and tune the algorithm with real data. We will extend the method to identify the PID lines constructed from data taken with the NSCL High Resolution Array (HiRA). 
 %%%
-\item[FRIB relevance:] ML tools and strategy must be developed for fast particle identifications to facilitate the huge amount of data from FRIB experiments.
+\item[FRIB relevance:] PID lines are ubiquitous observable in nearly all nuclear physics experiments that detect charged particles. ML tools and strategies will be needed for fast particle identifications to facilitate the huge amount of data from FRIB experiments.
 %%%
 \item[References:] {\it Non-linearity effects on the light-output calibration of light charged particles in CsI(Tl) scintillator crystals}, D. Dell'Aquila, S. Sweany,   et al., \href{https://doi.org/10.1016/j.nima.2019.03.065}{Nucl. Instrum. Methods Phys. Res. A 929 (2019) 162-172}.
 %%%
@@ -346,7 +352,7 @@ electron(s) corresponding initial position(s).
 \includegraphics[width=0.49\linewidth]{figures/pid_sTPC_data.pdf}
 \includegraphics[width=0.49\linewidth]{figures/pid_sTPC_monte_carlo.pdf}
 \caption{
-(left panel) Particle identifications from $^{132}$Sn+$^{124}$Sn collisions at 270 MeV/u measured with the S$\pi$RIT TPC. (Right panel). Particle identifications from Monte Carlo events using Machine learning for $\pi^+$, p, d, t, 3He.
+(left panel) Particle identifications from $^{132}$Sn+$^{124}$Sn collisions at 270 MeV/u measured with the S$\pi$RIT TPC. (Right panel). Particle identifications from Monte Carlo events using Machine learning for $\pi^+$, p, d, t, $^3$He.
 }
 \end{figure}
 \clearpage
@@ -558,6 +564,51 @@ to nuclear physics problems.
 \end{figure}
 
 
+
+
+\subsubsection{Machine Learning Algorithms for Hadron Correlators from Lattice QCD}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{0.98\linewidth}
+\begin{description}
+%%%
+\item[Participants:] G. Pederiva (g), A. Shindler
+%%%
+\item[Description:] Lattice QCD calculations
+  are an effective tool to probe the dynamics of quarks and gluons at low energies.
+  However, these calculations require large computational capabilities,
+  for example when computing the building block of any hadron correlation function:
+  the quark propagator.
+  We are studying the feasibility of using ML,
+  in particular algorithms based on Boosted Decision
+  Trees and Artificial NN,
+  to reduce the cost of the iterative solvers for quark propagator
+  by relating solutions to the system computed at different precision.
+%%%
+\item[FRIB relevance:] Understanding the nuclear structure starting
+  from the strong interactions between quarks and gluons and between nucleons,
+  is one of the main research thrusts of FRIB.
+  Reducing the computational cost of quark propagator
+  calculations could effectively lead to a precise determination of 
+  multi-nucleon correlators and nucleon scattering phase shifts with current
+  state-of-the-art hardware and software.
+%%%
+\item[References:] {\it Machine Learning Algorithms for Hadron Correlators from Lattice QCD},
+  G. Pederiva, A. Shindler, in preparation  
+\end{description}
+%%%
+\end{minipage}
+}
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=\textwidth]{figures/eff_mass.png}
+\caption{Example of proton effective mass plot with data from a precise calculation using a small stopping criterion $\epsilon=10^{-8}$ in the BiCGStab solver, a training set using a much larger $\epsilon = 10^{-2}$, and the NN results for the same data.}
+\end{figure}
+
+
+
+
 \subsubsection{Establishing a statistical approach to nuclear reactions}
 \vspace{5mm}
 \noindent
@@ -615,7 +666,7 @@ In the last years, we have been expanding our methods to include the PCA and BML
 
 \clearpage
 \newpage
-\subsubsection{Bayesian approach to constraint parameters of the Equation of State}
+\subsubsection{Bayesian approach to constrain parameters of the Equation of State}
 \vspace{5mm}
 \noindent
 \fbox{\begin{minipage}{0.98\linewidth}
@@ -659,11 +710,11 @@ parameters, we use a prior distributions based on a recently published meta-mode
 However, we find that assumptions in the prior distribution strongly
 influence the constraints on $\Lambda$.
 The sensitivity study is extended beyond the canonical neutron star with 1.4 solar mass. For neutron
-star with mass < 1.6 solar mass, L$_sym$ and K$_sym$ are highly correlated with the tidal deformability.
+star with mass < 1.6 solar mass, $L_{sym}$ and $K_{sym}$ are highly correlated with the tidal deformability.
 For more massive neutron stars, the tidal deformability is more strongly correlated with higher order
 Taylor expansion parameters. 
 %%%
-\item[FRIB relevance:] Investigating dense nuclear matter on earth and in heavens is one of the major objective in  FRIB science.
+\item[FRIB relevance:] Investigating dense nuclear matter on earth and in heavens is one of the major objectives in  FRIB science.
 %%%
 \item[References:] { {\it Insights on Skyrme parameters from GW170817}, C. Y. Tsang, M. B. Tsang, P. Danielewicz, F. J. Fattoyev,and W. G. Lynch, \href{https://doi.org/10.1016/j.physletb.2019.05.055}{Phys. Lett. B 796 1 (2019)} }.
 \end{description}
@@ -675,10 +726,40 @@ Taylor expansion parameters.
 \centering
 \includegraphics[width=1.0\linewidth]{figures/lamda_LKQ.pdf}
 \caption{
-Bivariate distributions between neutron star deformabilities ($\Lambda$) and Taylor expansion parameters, $L, K$ and $Q$ and pressure at twice normal nuclear matter density, $P(2\rho_0)$ for neutron stars with different masses.
+Bivariate distributions between neutron star deformabilities ($\Lambda$) and Taylor expansion parameters, $L$, $K$, $Q$ and pressure at twice normal nuclear matter density, $P(2\rho_0)$ for neutron stars with different masses.
 }
 \end{figure}
 
+\subsubsection{Applying Machine Learning to Bayesian Emulators}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{0.98\linewidth}
+\begin{description}
+\item[Participants:] S. Pratt
+%%%
+\item[Description:]
+Equation-of-state analyses require rigorous comparison of large heterogeneous data sets to sophisticated models, using input from nuclear structure, heavy-ion collisions and astrophysical observations. Due to the numerical expense of theoretical models model emulators have been employed to explore the highly multi-dimensional model space. Emulators approximate the full model by interpolating from a modest number of full-model runs, but even with an emulator these studies push the limits of large computing facilities. For example, the Bayesian exploration summarized in the figure below involved 1200 full model runs over a 14-dimensional parameter space. One must choose how many full model runs to perform, and at which points, and with what accuracy. If the runs require a sampling of events, should one sample fewer events or use the computational budget to explore more points in parameter space.  Machine learning provides a natural strategy for guiding and optimizing these studies. Such optimizations might save large amounts of computational expense, and make certain studies tenable that might otherwise be inconceivable.
+
+%%%
+\item[FRIB relevance:] Data from heavy-ion collisions and structure experiments from FRIB will both play a critical role in equation of state analyses.
+%%%
+\item[References:] { S.~Pratt, E.~Sangaline, P.~Sorensen and H.~Wang,
+  {\it Constraining the Eq. of State of Super-Hadronic Matter from Heavy-Ion Collisions},
+  \href{}{Phys.\ Rev.\ Lett.\  {\bf 114}, 202301 (2015) }}.
+\end{description}
+%%%
+\end{minipage}
+}
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.75\linewidth]{figures/madai_rhiclhc.pdf}
+\caption{
+The equation of state derived from a 14-parameter Bayesian analysis. Eq.s of state from a random assortment of parameters (left panel, Bayesian prior) are compared to those weighted by the Bayesian likelihood(right panel).
+}
+\end{figure}
+
+\clearpage
+\newpage
 
 \subsection{Applications}
 \subsubsection{Add title}
@@ -751,11 +832,11 @@ Please format your entry (1 entry per page) according to the following template:
 \fbox{\begin{minipage}{0.98\linewidth}
 \begin{description}
 %%%
-\item[Participants:] C. Tsang (g),  W. Lynch, M. Tsang
+\item[Participants:] C.Y. Tsang (g),  W.G. Lynch, M.B. Tsang
 %%%
-\item[Description:] To investigate the ``nature of neutron-rich matter in the cosmos and on earth'' is one of the scientific objective laid out in the 2015 NSAC Long Range Plan. With the energy and the availability of rare isotope beams, FRIB and FRIB400 are poised to study the Equation of State of asymmetric matter. One observable to study the EoS is to compare the relative emission of members of isospin multiplets, e.g. $\pi^-$ vs. $\pi^+$, $n$ vs. $p$, $t$ vs. $^3\mathrm{He}$, etc., which experience symmetry potentials and symmetry forces of opposite sign. Time projection chamber (TPC) provides large coverage to detect charged particles including pions emitted in heavy ion collisions (See figure). However, with mean multiplicity of 50 in the example shown, it becomes a challenge to reconstruct particle tracks, identify and accurately determine the momenta of the particles. We are looking into applying machine learning reconstruction algorithms pioneered in high energy physics. 
+\item[Description:] To investigate the ``nature of neutron-rich matter in the cosmos and on earth'' is one of the scientific objectives laid out in the 2015 NSAC Long Range Plan. With the energy and the availability of rare isotope beams, FRIB and FRIB400 are poised to study the Equation of State of asymmetric matter. One observable to study the EoS is to compare the relative emission of members of isospin multiplets, e.g. $\pi^-$ vs. $\pi^+$, $n$ vs. $p$, $t$ vs. $^3\mathrm{He}$, etc., which experience symmetry potentials and symmetry forces of opposite sign. Time projection chamber (TPC) provides large coverage to detect charged particles including pions emitted in heavy ion collisions (See figures). However, with mean multiplicity of 50 in the example shown, it becomes a challenge to reconstruct particle tracks, identify and accurately determine the momenta of the particles. We are looking into applying machine learning reconstruction algorithms pioneered in high energy physics. 
 %%%
-\item[FRIB relevance:]  The SpiRIT TPC (funded by DOE) will be moved from RIKEN to FRIB. At FRIB, the TPC, placed inside the HRS will be the anchor detector for the Equation of State program at FRIB and FRIB400. Both online and offline analysis of TPC data will require fast and accurate reconstruction of the particle tracks.
+\item[FRIB relevance:]  The SpiRIT TPC (funded by DOE) will be moved from RIKEN to FRIB.  When the TPC is placed inside the HRS, it will be the anchor detector for the Equation of State program at FRIB and FRIB400. Both online and offline analysis of TPC data will require fast and accurate reconstruction of the particle tracks.
 %%%
 \item[References:] {\it S$\pi$RIT: A time-projection chamber for symmetry-energy studies}, R. Shane, A.B. McIntosh, T. Isobe, W.G. Lynch, et al., \href{https://doi.org/10.1016/j.nima.2015.01.026}{Nucl. Instrum. Methods Phys. Res. A 784 (2015) 513-517}.
 %%%
@@ -769,7 +850,7 @@ Please format your entry (1 entry per page) according to the following template:
 \includegraphics[width=0.45\linewidth]{figures/tracks_top_view.pdf}
 \includegraphics[width=0.45\linewidth]{figures/tracks_3d_view.pdf}
 \caption{
-Tracks from two different events from 132Sn+124Sn collisions as viewed from the top (left panel) and 3D (right panel). The big spiral in the left panel is an emitted low energy $\pi^-$.
+Tracks from two different events from $^{132}Sn+^{124}Sn$ collisions as viewed from the top (left panel) and 3D (right panel). The big spiral in the left panel is an emitted low energy $\pi^-$.
 }
 \end{figure}
 \clearpage
@@ -784,9 +865,9 @@ Tracks from two different events from 132Sn+124Sn collisions as viewed from the 
 %%%
 \item[Participants:] F.C.E. Teh (g), T. Ladourceur (u), C.Y. Tsang (g), M.B. Tsang
 %%%
-\item[Description:] With the advancement of digital electronics, we are able to record the waveforms of the signal pulses directly. That allows automation and innovation in data analysis. Depending on the detector materials, waveforms may contain information about the particle types and the corresponding energy. The figure below shows the waveforms identified using traditional method that distinguish neutrons from gammas detected by a large array made from organic liquid scintillator from an experiment at NSCL. The pulse shape depends on the position of the detector where the radiation hit. It is a complicated multi-correlation problem suitable for developing machine learning algorithm using separate data for training and validating.
+\item[Description:] With the advancement of digital electronics, we are able to record the waveforms of the signal pulses directly. That allows automation and innovation in data analysis. Depending on the detector materials, waveforms may contain information about the particle types and the corresponding energy. The figure below shows the waveforms identified using new improved method (right panel) to distinguish neutrons from gammas detected by a large array made from organic liquid scintillator from an experiment at NSCL. The pulse shape (left panel) depends on the position of the detector where the radiation hit. It is a complicated multi-correlation problem suitable for developing machine learning algorithm using separate data sets for training and validating.
 %%%
-\item[FRIB relevance:] Digital electronics  produces large amount of information and are increasingly used in nuclear physics experiments including experiments in FRIB. To exploit the full potential of digial electronics, fast ML algorithms must be developed to classify pulse shapes for different particle types in online or offline analysis.
+\item[FRIB relevance:] Digital electronics  produces large amount of information and are increasingly used in nuclear physics experiments including those in FRIB. To exploit the full potential of digial electronics, fast machine learning algorithms must be developed to classify pulse shapes for different particle types in online or offline analysis.
 %%%
 \item[References:] {\it Value-assigned pulse shape discrimination for neutron detectors}, F.C.E. Teh, J.-W. Lee, K. Zhu, K.W. Brown, et al., \href{https://arxiv.org/abs/2001.07518}{arXiv:2001.07518}.
 %%%
