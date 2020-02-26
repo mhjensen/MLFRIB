@@ -139,6 +139,7 @@ We list here various acronyms used in the description of the different AI/ML pro
 \begin{description}
 \item[AE] Auto encoders
 \item[AI] Artificial intelligence
+\item[ANN] Artificial neural networks
 \item[BC] Bayesian calibration
 \item[BM] Boltzmann machines
 \item[BMA] Bayesian model averaging
@@ -178,22 +179,23 @@ We list here various acronyms used in the description of the different AI/ML pro
 
 \section{AI/ML projects at FRIB}
 
-\subsection{Accelerators}
+\subsection{Accelerators/Beam Tuning}
 
 %%%%%%%%%%%%%%%%%%%%%%  Entry Begins %%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Add title}
+\subsubsection{Artificial Intelligence Aided Beam Tuning}
 \vspace{5mm}
 \noindent
 \fbox{\begin{minipage}{0.96\linewidth}
 \begin{description}
 %%%
-\item[Participants:] 
+\item[Participants:] Y.Hao, S.Lidia, T.Maruta, L.Neufcourt(p), A.Plastun and T.Zhang
 %%%
-\item[Description:]
+\item[Description:] The capability of providing versatile species of ions presents a challenge of fast accelerator tuning of the new ion species to maintain the high availability of scientific discoveries.  The recent progress on AI shines a light on a new approach to achieve fast tuning.  We propose to establish a data-refined accelerator model for fast tuning using AI based on the existing diagnostic data.  The proposed work including the inference of parameters in the accelerator model and creating a surrogate model using the GP or ANN for the components that cannot be well predicted by physics model.
 %%%
-\item[FRIB relevance:] 
+\item[FRIB relevance:] The ML and BS application in Beam tuning provide new methods to quickly switch the operation modes of FRIB.
 %%%
-\item[References:] {\it To be added}, in press/preparation/ or published 
+\item[References:] {\it Y. Hao and L. M. Neufcourt, “Application of Bayesian Inference in Accelerator Commissioning of FRIB”, in Proc. 10th Int. Particle Accelerator Conf. (IPAC'19), Melbourne, Australia, May 2019}
+
 \end{description}
 %%%
 \end{minipage}
@@ -201,12 +203,36 @@ We list here various acronyms used in the description of the different AI/ML pro
 \begin{figure}[htb!]
 %%%% for side caption use \begin{SCfigure}[10][b]... \end{SCfigure}
 \centering
-\caption{To be added}
+\includegraphics[width=\linewidth]{figures/bayesian_inference_FRIB.png}
+\caption{The iterations of inferring the beam linear properties at the exit of the ion source using Bayesian Inference}
 \end{figure}
 \clearpage
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%  Entry Ends %%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%  Entry Begins %%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Beam loss Control and Machine Protection with Artificial Intelligence}
+\vspace{5mm}
+\noindent
+\fbox{\begin{minipage}{0.96\linewidth}
+\begin{description}
+%%%
+\item[Participants:] Y.Hao, S.Lidia, L.Neufcourt(p) and T.Zhang
+%%%
+\item[Description:] The beam loss control and high-fidelity machine protection system are essential tasks to achieve the 400 KW ion beam power in FRIB.  Artificial intelligence provides a powerful toolset in predicting and localizing the beam loss, anomaly detection and unloading the risk of the hardware damage due to beam loss.   We propose to create a surrogate model with GP or ANN to identify the correlation of beam properties and the beam loss using diagnostic data from BPMs and loss monitors, ‘forecast’ and prevent the hardware damage due to excess power from beam loss.
+%%%
+\item[FRIB relevance:] The surrogate model create by AI may largely protect the accelerator from damaging or degrading due to beam losses and improve the availability of the accelerator.
+%%%
+\item[References:] {\it None}
+
+\end{description}
+%%%
+\end{minipage}
+}
+
+\clearpage
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%  Entry Ends %%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%  Entry Begins %%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Machine learning SECAR tuning optimization}\label{sidecaption}
 \vspace{5mm}
@@ -235,6 +261,9 @@ independently minimize the beam-spot size at different critical positions in SEC
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%  Entry Ends %%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+
 \subsection{Detectors}
 \subsubsection{Gamma-ray Tracking}
 \vspace{5mm}
@@ -242,12 +271,17 @@ independently minimize the beam-spot size at different critical positions in SEC
 \fbox{\begin{minipage}{0.96\linewidth}
 \begin{description}
 %%%
-\item[Participants:] D. Weisshaar, A. Gade, J. Chung
-\item[Description:    ]
+\item[Participants:] D. Weisshaar, A. Gade, L. Neufcourt, J. Chung
+\item[Description:]  Gamma-ray tracking algorithms determine how many $\gamma$ rays got fully or partially absorbed in an event by analyzing the measured interaction positions and energy depositions. 
+%%ML techniques like NN are trained on measured data sets by analyzing the pattern of interaction points. 
+Experimental energy measurements and computer simulations can constitute a large set of data
+on which ML models such as neural networks can be trained to identify patterns in interaction points.
+This approach does make no assumption about the underlying scattering processes (Compton scatter, Photo effect, pair production) as state-of-the-art deterministic algorithms do, especially the handling of wrongly reported interaction points by the detectors. 
+
 %%%
-\item[FRIB relevance: Improvement  ] 
+\item[FRIB relevance:] The Gamma-Ray Energy Tracking Array GRETA will be one of the premium devices at FRIB. Improvement on its tracking capability in terms of better identification of incomplete absorbed $\gamma$ rays will directly translate into better spectral quality and sensitivity of this device, enlarging its scientific reach. 
 %%%
-\item[References:] {\it To be added}, in press/preparation/ or published 
+\item[References:] {none} 
 \end{description}
 %%%
 \end{minipage}
@@ -294,7 +328,7 @@ axes have arbitrary non-informative units.}
 \clearpage
 \newpage
 
-\subsubsection{Machine learning for $\beta$-decay experiments }
+\subsubsection{Machine learning for beta-decay experiments }
 
 \vspace{5mm}
 \noindent
@@ -581,7 +615,7 @@ to nuclear physics problems.
   the quark propagator.
   We are studying the feasibility of using ML,
   in particular algorithms based on Boosted Decision
-  Trees and Artificial NN,
+  Trees and  ANN,
   to reduce the cost of the iterative solvers for quark propagator
   by relating solutions to the system computed at different precision.
 %%%
@@ -745,7 +779,7 @@ Equation-of-state analyses require rigorous comparison of large heterogeneous da
 %%%
 \item[References:] { S.~Pratt, E.~Sangaline, P.~Sorensen and H.~Wang,
   {\it Constraining the Eq. of State of Super-Hadronic Matter from Heavy-Ion Collisions},
-  \href{}{Phys.\ Rev.\ Lett.\  {\bf 114}, 202301 (2015) }}.
+  \href{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.114.202301}{Phys.\ Rev.\ Lett.\  {\bf 114}, 202301 (2015) }}.
 \end{description}
 %%%
 \end{minipage}
@@ -789,28 +823,17 @@ The equation of state derived from a 14-parameter Bayesian analysis. Eq.s of sta
 
 \section{Education and Workforce}
 
-AI, ML, statistical data analysis and related areas are expected to
-play an ever-increasing role in many areas, from fundamental and
-applied research at universities and national laboratories to
-applications and developments in both the private and the public
-sectors.
-Developing basic research activities in these frontier
-computational technologies is thus of strategic importance for our
-society’s capability to address future scientific problems. Transfer
-of knowledge to other disciplines and sectors, as well as developing
-lasting collaborations with partners outside the traditional
-university sector, are themes we expect will benefit society at large
-and that will play central roles. Nuclear Physics keeps attracting many brilliant young researchers and providing our work force with these competences and skills for solving complicated physics problems is a compelling task for our community.
+There are only 26,000 AI researchers currently in the US. This is estimated to represent only a fifth of the current demand. There is an urgent need for training in AI, at a variety of educational levels and for diverse audiences. To this end, beyond our research efforts, we develop a range of outreach, recruitment, and educational activities. These activities will serve to raise interest in AI-related fields. We aim to retain talented students in AI-related fields and to help them to secure employment in a wide range of careers, thus ensuring that the new techniques and concepts developed at FRIB are widely disseminated.
 
 
 \begin{itemize}
 
-\item In order to develop education and training efforts that target AI and ML related methods applied to Nuclear Physics, we  organized in 2019 a four day long  FRIB-TA workshop on ML methods in Nuclear physics at the NSCL/FRIB, with more than 100 participants.
+\item In order to develop education and training efforts that target AI and ML related methods applied to Nuclear Physics, in 2019 we  organized a four day long  \href{https://indico.frib.msu.edu/event/16/timetable/?view=standard}{FRIB-TA workshop} on {\it ML methods in Nuclear physics} at  NSCL/FRIB, with more than 100 participants.
 
-\item In 2020 several of us (Bazin, Hjorth-Jensen and Liddick) will teach a three-week long Nuclear Talent course on Machine Learning and Data Analysis applied to nuclear physics. 
+\item In 2020 several of us (Bazin, Hjorth-Jensen and Liddick) will teach a three-week long Nuclear Talent course at ECT*  on \href{https://www.ectstar.eu/node/4472}{Machine Learning and Data Analysis applied to nuclear physics}. 
 
 
-\item From spring 2020 (April and May, and planned to be repeated on an annual basis) we will host and run intensive courses on Machine Learning, Bayesian statistics and statistical data analysis for students and faculty in theoretical and experimental nuclear physics. The aim is to develop a large amount of material with lectures notes, videos, projects and hands-on material that can serve the whole nuclear Physics community. An example of possible material can found at \href{https://compphysics.github.io/MachineLearning/doc/web/course.html}.  The format of the course is similar to a Nuclear TALENT course.
+\item From spring 2020 (April and May, and planned to be repeated on an annual basis) we will host and run intensive courses on ML, Bayesian inference, and statistical data analysis for students and faculty in theoretical and experimental nuclear physics. The aim is to develop a large amount of material with lectures notes, videos, projects and hands-on material that can serve the whole nuclear Physics community. An example of possible material can found at \href{https://compphysics.github.io/MachineLearning/doc/web/course.html}.  The format of the course is similar to a Nuclear TALENT course.
 
 \item
 We initiated the series of meetings on {\it Enhancing the interaction between nuclear experiment and theory through information and statistics} \href{https://iopscience.iop.org/journal/0954-3899/page/ISNET}{(ISNET)}.  The next ISNET-8 will be held at FRIB during  Dec. 14-17th, 2020.
@@ -823,10 +846,9 @@ We initiated the series of meetings on {\it Enhancing the interaction between nu
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% future %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Appendix: Anticipated projects}
 
-Please format your entry (1 entry per page) according to the following template:
-
-
+\subsection{Detectors}
 \subsubsection{Particle reconstruction of Time Projection Chamber}
+
 \vspace{5mm}
 \noindent
 \fbox{\begin{minipage}{0.98\linewidth}
@@ -834,7 +856,7 @@ Please format your entry (1 entry per page) according to the following template:
 %%%
 \item[Participants:] C.Y. Tsang (g),  W.G. Lynch, M.B. Tsang
 %%%
-\item[Description:] To investigate the ``nature of neutron-rich matter in the cosmos and on earth'' is one of the scientific objectives laid out in the 2015 NSAC Long Range Plan. With the energy and the availability of rare isotope beams, FRIB and FRIB400 are poised to study the Equation of State of asymmetric matter. One observable to study the EoS is to compare the relative emission of members of isospin multiplets, e.g. $\pi^-$ vs. $\pi^+$, $n$ vs. $p$, $t$ vs. $^3\mathrm{He}$, etc., which experience symmetry potentials and symmetry forces of opposite sign. Time projection chamber (TPC) provides large coverage to detect charged particles including pions emitted in heavy ion collisions (See figures). However, with mean multiplicity of 50 in the example shown, it becomes a challenge to reconstruct particle tracks, identify and accurately determine the momenta of the particles. We are looking into applying machine learning reconstruction algorithms pioneered in high energy physics. 
+\item[Description:] To investigate the ``nature of neutron-rich matter in the cosmos and on earth'' is one of the scientific objectives laid out in the 2015 NSAC Long Range Plan. With the energy and the availability of rare isotope beams, FRIB and FRIB400 are poised to study the Equation of State of asymmetric matter. One observable to study the EoS is to compare the relative emission of members of isospin multiplets, e.g. $\pi^-$ vs. $\pi^+$, $n$ vs. $p$, $t$ vs. $^3\mathrm{He}$, etc., which experience symmetry potentials and symmetry forces of opposite sign. Time projection chamber (TPC) provides large coverage to detect charged particles including pions emitted in heavy ion collisions (See figures). However, with mean multiplicity of 50 in the example shown, it becomes a challenge to reconstruct particle tracks, identify and accurately determine the momenta of the particles. We are looking into applying ML reconstruction algorithms pioneered in high energy physics. 
 %%%
 \item[FRIB relevance:]  The SpiRIT TPC (funded by DOE) will be moved from RIKEN to FRIB.  When the TPC is placed inside the HRS, it will be the anchor detector for the Equation of State program at FRIB and FRIB400. Both online and offline analysis of TPC data will require fast and accurate reconstruction of the particle tracks.
 %%%
@@ -858,16 +880,18 @@ Tracks from two different events from $^{132}Sn+^{124}Sn$ collisions as viewed f
 
 
 \subsubsection{Pulse shape discrimination from digitized waveforms}
+
 \vspace{5mm}
+
 \noindent
 \fbox{\begin{minipage}{0.98\linewidth}
 \begin{description}
 %%%
 \item[Participants:] F.C.E. Teh (g), T. Ladourceur (u), C.Y. Tsang (g), M.B. Tsang
 %%%
-\item[Description:] With the advancement of digital electronics, we are able to record the waveforms of the signal pulses directly. That allows automation and innovation in data analysis. Depending on the detector materials, waveforms may contain information about the particle types and the corresponding energy. The figure below shows the waveforms identified using new improved method (right panel) to distinguish neutrons from gammas detected by a large array made from organic liquid scintillator from an experiment at NSCL. The pulse shape (left panel) depends on the position of the detector where the radiation hit. It is a complicated multi-correlation problem suitable for developing machine learning algorithm using separate data sets for training and validating.
+\item[Description:] With the advancement of digital electronics, we are able to record the waveforms of the signal pulses directly. That allows automation and innovation in data analysis. Depending on the detector materials, waveforms may contain information about the particle types and the corresponding energy. The figure below shows the waveforms identified using new improved method (right panel) to distinguish neutrons from gammas detected by a large array made from organic liquid scintillator from an experiment at NSCL. The pulse shape (left panel) depends on the position of the detector where the radiation hit. It is a complicated multi-correlation problem suitable for developing ML algorithm using separate data sets for training and validating.
 %%%
-\item[FRIB relevance:] Digital electronics  produces large amount of information and are increasingly used in nuclear physics experiments including those in FRIB. To exploit the full potential of digial electronics, fast machine learning algorithms must be developed to classify pulse shapes for different particle types in online or offline analysis.
+\item[FRIB relevance:] Digital electronics  produces large amount of information and are increasingly used in nuclear physics experiments including those in FRIB. To exploit the full potential of digial electronics, fast ML algorithms must be developed to classify pulse shapes for different particle types in online or offline analysis.
 %%%
 \item[References:] {\it Value-assigned pulse shape discrimination for neutron detectors}, F.C.E. Teh, J.-W. Lee, K. Zhu, K.W. Brown, et al., \href{https://arxiv.org/abs/2001.07518}{arXiv:2001.07518}.
 %%%
@@ -887,18 +911,6 @@ Tracks from two different events from $^{132}Sn+^{124}Sn$ collisions as viewed f
 \clearpage
 \newpage
 
-\vspace{5mm}
-\noindent
-\fbox{\begin{minipage}{0.98\linewidth}
-{\bf Topic} (in subsubsection title)
-\begin{description}
-\item[Participants] List local faculty/staff, research associates (p), students (g,u). External collaborators should be listed as co-authors in references.
-\item[Description] Provide a short paragraph ($<$600 characters; think of a PRL abstract) describing the ML/AI aspects of the project.
-\item[FRIB relevance] ($<$600 characters) 
-\item[Outcomes] List instrumentation outcomes, if any. Provide your published/submitted/anticipated papers with hyperlinks 
-\end{description}
-You are encouraged to provide a figure below the description.
-\end{minipage}}
 
 
 
