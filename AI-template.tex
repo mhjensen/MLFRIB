@@ -337,23 +337,27 @@ axes have arbitrary non-informative units.}
 %%%
 \item[Participants:] P. Johns (u), G. T. Ulvik (g), S. N. Liddick, M. Hjorth-Jensen
 %%%
-\item[Description:] In the searching for a predictive model of the atomic nucleus,  critical  benchmarks  between  theory  and  experiment  can  be  found  in  the  properties  of  rare  isotopes. Shape coexistence is a phenomenon in which promotion of  nucleons  across  an  energy  gap  can  become  energetically favored and coexist at low-excitation energies with standard  shell  model  configurations.   Locations  where shape  coexistence  occurs  provides  a  critical  benchmark of  theoretical  models  far  from  stability.   Shape  coexistence can be sensitively studied following the population of specific states in beta decay that subsequently undergo E0 electromagnetic transitions.  Such transitions are forbidden to proceed through gamma-ray emission and instead occur through the emission of an internal conversion electron.  The resulting experimental signature is the emission of two electrons from an identical position in the volume of the detector.
+\item[Description:] 
+%In the searching for a predictive model of the atomic nucleus,  critical  benchmarks  between  theory  and  experiment  can  be  found  in  the  properties  of  rare  isotopes. 
+Shape coexistence is a phenomenon in which promotion of  nucleons  across  an  energy  gap  can  become  energetically favored and coexist at low-excitation energies with standard  shell  model  configurations.   %Locations  where shape  coexistence  occurs  provides  a  critical  benchmark of  theoretical  models  far  from  stability.   
+Shape  coexistence can be sensitively studied following the population of specific states in beta decay that subsequently undergo E0 electromagnetic transitions.  Such transitions are forbidden to proceed through gamma-ray emission and instead occur through the emission of an internal conversion electron.  The resulting experimental signature is the emission of two electrons. %from an identical position in the volume of the detector.
 
-This process is essentially simultaneous in time, it is pivotal to differentiate between the electron $\beta$ emitted from the nucleus and the internal conversion electron $e^{-}$ emitted from the atom. We have used, with success, various classification methods, in particular CNNs, AEs, RNNSs and VAEs to to distinguish between one and two electron events and predict the
-electron(s) corresponding initial position(s) and energies.  The techniques can be extended to cases where the emissions are separated in space allowing for the characterization of standard gamma-decaying isomeric states.
+%This process is essentially simultaneous in time, it is pivotal to differentiate between the electron $\beta$ emitted from the nucleus and the internal conversion electron $e^{-}$ emitted from the atom. 
+We have used, with success, various classification methods to distinguish between various electron processes, in particular CNNs, AEs, RNNSs and VAEs to to distinguish between one and two electron events and predict the
+electron(s) corresponding initial position(s) and energies.  
+%The techniques can be extended to cases where the emissions are separated in space allowing for the characterization of standard gamma-decaying isomeric states.
 
 %%%
 \item[FRIB relevance:] We expect that many of the new FRIB experiments will produce large amounts of data with loose triggering conditions that can be used to achieve multiple high-impact results for each experiment. The techniques developed here will enable access to scientific outcomes that are difficult or impossible with current technology. 
 %%%
-\item[References:] 
-Co Authors - M. Kutchera
+\item[References:] In preparation
 \end{description}
 %%%
 \end{minipage}
 }
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=\linewidth]{figures/DoubleTrace.png}
+\includegraphics[width=0.6\linewidth]{figures/DoubleTrace.png}
 \caption{Example  of  a  waveform  with  multiple  pulses  in  a single detector element.  Black is the experimental voltage as a  function  of  time  and  red  is  the  currently  used  analytical fit.  Each sample is 2 nanoseconds.  AI methods could be used to  improve  the  classification  of  waveforms  leading  to  better identification of multiple pulses and extracting the energy of each pulse and their relative time separation
 }
 \end{figure}
@@ -375,14 +379,14 @@ The technique of total absorption spectroscopy was developed more than 30 years 
 %%%
 \item[FRIB relevance:] Total absorption experiments at FRIB will play a significant role in the beta-decay program.  The application of machine learning could greatly impact the accuracy and speed of extracting scientific insight from experimental data.  Once demonstrated, the technique could be extended to other experimental systems with lower efficiencies and higher energy resolutions.
 %%%
-\item[References:] 
+\item[References:] In preparation.
 \end{description}
 %%%
 \end{minipage}
 }
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=\linewidth]{figures/SuN60Co.png}
+\includegraphics[width=0.6\linewidth]{figures/SuN60Co.png}
 \caption{Spectrum  of  total  energy  deposited  into  SuN  as  a
 function of the energy deposited into individual segments following the decay of 60Co.  AI methods could be used to remove the detector response from the experimentally recorded spectrum.
 }
@@ -932,11 +936,10 @@ We initiated the series of meetings on {\it Enhancing the interaction between nu
 Tracks from two different events from $^{132}Sn+^{124}Sn$ collisions as viewed from the top (left panel) and 3D (right panel). The big spiral in the left panel is an emitted low energy $\pi^-$.
 }
 \end{figure}
-\clearpage
-\newpage
 
+\subsection{Analysis of Final States}
 
-\subsubsection{Pulse shape discrimination from digitized waveforms}
+\subsubsection{Multiparticle final states in central collisions}
 
 \vspace{5mm}
 
@@ -944,9 +947,11 @@ Tracks from two different events from $^{132}Sn+^{124}Sn$ collisions as viewed f
 \fbox{\begin{minipage}{0.98\linewidth}
 \begin{description}
 %%%
-\item[Participants:] F.C.E. Teh (g), T. Ladourceur (u), C.Y. Tsang (g), M.B. Tsang
+\item[Participants:] P. Nzabahimana (g), P. Danielewicz
 %%%
-\item[Description:] With the advancement of digital electronics, we are able to record the waveforms of the signal pulses directly. That allows automation and innovation in data analysis. Depending on the detector materials, waveforms may contain information about the particle types and the corresponding energy. The figure below shows the waveforms identified using new improved method (right panel) to distinguish neutrons from gammas detected by a large array made from organic liquid scintillator from an experiment at NSCL. The pulse shape (left panel) depends on the position of the detector where the radiation hit. It is a complicated multi-correlation problem suitable for developing ML algorithm using separate data sets for training and validating.
+\item[Description:] Central collisions of heavy nuclei serve as means of learning about bulk properties of nuclear matter at varying density, temperature and neutron-proton asymmetry, under laboratory conditions.  
+
+With the advancement of digital electronics, we are able to record the waveforms of the signal pulses directly. That allows automation and innovation in data analysis. Depending on the detector materials, waveforms may contain information about the particle types and the corresponding energy. The figure below shows the waveforms identified using new improved method (right panel) to distinguish neutrons from gammas detected by a large array made from organic liquid scintillator from an experiment at NSCL. The pulse shape (left panel) depends on the position of the detector where the radiation hit. It is a complicated multi-correlation problem suitable for developing ML algorithm using separate data sets for training and validating.
 %%%
 \item[FRIB relevance:] Digital electronics  produces large amount of information and are increasingly used in nuclear physics experiments including those in FRIB. To exploit the full potential of digial electronics, fast ML algorithms must be developed to classify pulse shapes for different particle types in online or offline analysis.
 %%%
@@ -965,8 +970,13 @@ Tracks from two different events from $^{132}Sn+^{124}Sn$ collisions as viewed f
 (Left panel) Waveforms recorded by the Large Area Neutron Detector (LANA).  (Right panel) Valued-assigned pulse shape discrimination (VPSD) method developed to better discriminate neutrons and gamma.
 }
 \end{figure}
+
+
+
 \clearpage
 \newpage
+
+
 
 
 
